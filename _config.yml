@@ -22,6 +22,19 @@ github_username: thepeoplesledger-oss
 minimal_mistakes_skin: default
 search: true
 
+navigation:
+  - title: "Home"
+    url: /
+  - title: "Ledger File"
+    url: /ledger-file/
+  - title: "People’s Brief"
+    url: /peoples-brief/
+  - title: "Investigations"
+    url: /investigations/
+  - title: "Editorials"
+    url: /editorials/
+  - title: "About"
+    url: /about/
 # Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
