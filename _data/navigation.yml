@@ -1,9 +1,11 @@
 main:
-  - title: "Posts"
-    url: /posts/
-  - title: "Categories"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
+  - title: "Ledger File"
+    url: /ledger-file/
+  - title: "People’s Brief"
+    url: /peoples-brief/
+  - title: "Investigations"
+    url: /investigations/
+  - title: "Editorials"
+    url: /editorials/
   - title: "About"
     url: /about/
