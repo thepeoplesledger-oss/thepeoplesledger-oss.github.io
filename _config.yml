@@ -108,6 +108,13 @@ defaults:
     values:
       layout: single
       author_profile: true
+    # homepage
+  - scope:
+      path: ""
+      type: home
+    values:
+      layout: home
+      nav: true
 
 category_archive:
   type: liquid
