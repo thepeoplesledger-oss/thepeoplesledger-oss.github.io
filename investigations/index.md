@@ -1,5 +1,5 @@
 ---
-layout: category
+layout: single
 title: "Investigations"
 permalink: /investigations/
 category: investigations
