@@ -25,16 +25,22 @@ minimal_mistakes_skin: default
 search: true
 
 navigation:
-  - title: "Ledger File"
-    url: /ledger-file/
-  - title: "People’s Brief"
-    url: /peoples-brief/
-  - title: "Investigations"
-    url: /investigations/
-  - title: "Editorials"
-    url: /editorials/
+ navigation:
+  - title: "Home"
+    url: "/"
   - title: "About"
-    url: /about/
+    url: "/about/"
+  - title: "Ledger File"
+    url: "/ledger-file/"
+  - title: "People’s Brief"
+    url: "/peoples-brief/"
+  - title: "Investigations"
+    url: "/investigations/"
+  - title: "Editorials"
+    url: "/editorials/"
+  - title: "Projects"
+    url: "/projects/"
+  
 # Homepage settings
 home:
   layout: home
