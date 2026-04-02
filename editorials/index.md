@@ -1,5 +1,5 @@
 ---
-layout: category
+layout: single
 title: "Editorials"
 permalink: /editorials/
 category: editorials
