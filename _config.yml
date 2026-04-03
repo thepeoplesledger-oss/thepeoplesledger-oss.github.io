@@ -25,6 +25,8 @@ navigation:
     url: "/ledger-file/"
   - title: "People’s Brief"
     url: "/peoples-brief/"
+  - title: "Weekly Record"
+    url: "/weekly-record/"
   - title: "Investigations"
     url: "/investigations/"
   - title: "Editorials"
@@ -61,6 +63,9 @@ defaults:
     values:
       layout: single
       author_profile: false
+      show_permalink: false
+      show_date: false
+      read_time: false
 
 # ------------------------------------------------------------
 # Homepage Settings (optional)
