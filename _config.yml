@@ -62,14 +62,6 @@ defaults:
       layout: single
       author_profile: false
 
-  # Homepage
-  - scope:
-      path: ""
-      type: home
-    values:
-      layout: home
-      author_profile: false
-
 # ------------------------------------------------------------
 # Homepage Settings (optional)
 # ------------------------------------------------------------
