@@ -18,7 +18,7 @@ email:
 description: >-
   A civic newsroom dedicated to evidence, accountability, and public power.
 url: "https://thepeoplesledger-oss.github.io"
-baseurl: "/thepeoplesledger.github.io"
+baseurl: ""
 twitter_username:
 github_username: thepeoplesledger-oss
 minimal_mistakes_skin: default
