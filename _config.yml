@@ -1,49 +1,68 @@
 # ------------------------------------------------------------
 # Site Identity
 # ------------------------------------------------------------
-title: "The People's Ledger"
-email:
-description: >-
-  A civic newsroom dedicated to evidence, accountability, and public power.
-url: "https://thepeoplesledger-oss.github.io"
-baseurl: ""   # IMPORTANT: must be empty for user/org sites
 
-twitter_username:
-github_username: thepeoplesledger-oss
+title: "The People's Ledger"
+
+description: >-
+  Independent public-interest journalism investigating power,
+  public spending, governance, corruption, and the real-world
+  impact of policy decisions on everyday Ghanaians.
+
+url: "https://thepeoplesledger-oss.github.io"
+baseurl: ""
+
 minimal_mistakes_skin: default
+
 search: true
 
-# ------------------------------------------------------------
-# Navigation
-# ------------------------------------------------------------
-navigation:
-  - title: "Home"
-    url: "/"
-  - title: "About"
-    url: "/about/"
-  - title: "Ledger File"
-    url: "/ledger-file/"
-  - title: "People’s Brief"
-    url: "/peoples-brief/"
-  - title: "Weekly Record"
-    url: "/weekly-record/"
-  - title: "Investigations"
-    url: "/investigations/"
-  - title: "Editorials"
-    url: "/editorials/"
-  - title: "Projects"
-    url: "/projects/"
+github_username: thepeoplesledger-oss
 
 # ------------------------------------------------------------
 # Theme
 # ------------------------------------------------------------
+
 remote_theme: "mmistakes/minimal-mistakes"
 
 # ------------------------------------------------------------
-# Defaults (REQUIRED for Minimal Mistakes)
+# Navigation
 # ------------------------------------------------------------
+
+navigation:
+  - title: "Investigations"
+    url: "/investigations/"
+
+  - title: "Ledger File"
+    url: "/ledger-file/"
+
+  - title: "People's Brief"
+    url: "/peoples-brief/"
+
+  - title: "Weekly Record"
+    url: "/weekly-record/"
+
+  - title: "Accountability Tracker"
+    url: "/accountability-tracker/"
+
+  - title: "About"
+    url: "/about/"
+
+# ------------------------------------------------------------
+# Homepage
+# ------------------------------------------------------------
+
+home:
+  layout: home
+  nav: true
+
+# ------------------------------------------------------------
+# Defaults
+# ------------------------------------------------------------
+
 defaults:
+
   # Posts
+
   - scope:
       path: ""
       type: posts
@@ -51,12 +70,14 @@ defaults:
       layout: single
       nav: true
       author_profile: false
+      show_date: true
       read_time: true
-      comments: true
       share: true
       related: true
+      comments: false
 
-  # Pages (all standalone pages)
+  # Pages
+
   - scope:
       path: ""
       type: pages
@@ -64,26 +85,20 @@ defaults:
       layout: single
       author_profile: false
       show_permalink: false
-      show_date: false
       read_time: false
-
-# ------------------------------------------------------------
-# Homepage Settings (optional)
-# ------------------------------------------------------------
-home:
-  layout: home
-  nav: true
 
 # ------------------------------------------------------------
 # Build Settings
 # ------------------------------------------------------------
+
 markdown: kramdown
 
-# Outputting
 permalink: pretty
-paginate: 5
+
+paginate: 10
 paginate_path: /page:num/
-timezone:
+
+timezone: Africa/Accra
 
 include:
   - _pages
@@ -91,47 +106,55 @@ include:
 # ------------------------------------------------------------
 # Plugins
 # ------------------------------------------------------------
+
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-gist
   - jekyll-feed
   - jemoji
+  - jekyll-gist
   - jekyll-include-cache
 
 # ------------------------------------------------------------
-# Author Profile
+# Organization Profile
 # ------------------------------------------------------------
+
 author:
-  name: "Lisa Squire"
-  avatar: "/assets/images/bio-photo.jpg"
-  bio: "Founder of The People’s Ledger — a civic newsroom for evidence, accountability, and public power."
-  links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://thepeoplesledger.com"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/thepeoplesledger-oss"
+  name: "The People's Ledger"
+  bio: "Independent civic newsroom focused on accountability, transparency, governance, and public-interest reporting."
 
 # ------------------------------------------------------------
 # Footer Links
 # ------------------------------------------------------------
+
 footer:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/thepeoplesledger-oss"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://thepeoplesledger.com"
+
+    - label: "RSS Feed"
+      icon: "fas fa-fw fa-rss"
+      url: "/feed.xml"
 
 # ------------------------------------------------------------
 # Archives
 # ------------------------------------------------------------
+
 category_archive:
-  enabled: false
+  type: liquid
+  path: /categories/
 
 tag_archive:
   type: liquid
   path: /tags/
+
+# ------------------------------------------------------------
+# SEO
+# ------------------------------------------------------------
+
+og_image: "/assets/images/ledger-social-card.jpg"
+
+twitter:
+  username:
+  card: summary_large_image
