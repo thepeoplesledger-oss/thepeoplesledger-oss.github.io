@@ -145,57 +145,26 @@ footer:
 # ------------------------------------------------------------
 # TOP NAVIGATION
 # ------------------------------------------------------------
-# IMPORTANT: Minimal Mistakes reads the top navigation menu from a
-# SEPARATE file, not from _config.yml — this is a hard requirement
-# of the theme itself, not a choice made here. Create a file at:
-#     _data/navigation.yml
-# with exactly this content so the menu matches your request:
-#
-# main:
-#   - title: "Ledger File"
-#     url: /ledger-file/
-#   - title: "People's Brief"
-#     url: /peoples-brief/
-#   - title: "Weekly Record"
-#     url: /weekly-record/
-#   - title: "Investigations"
-#     url: /investigations/
-#   - title: "Editorials"
-#     url: /editorials/
-#   - title: "Projects"
-#     url: /projects/
-#   - title: "About"
-#     url: /about/
-#   - title: "Contact"
-#     url: /contact/
-#
-# Each of those URLs is the collection's landing page. You'll need a
-# simple page (e.g. ledger-file.md) at each address that lists that
-# collection — ask me any time and I can generate those pages too.
+# Minimal Mistakes reads the top navigation menu from a SEPARATE
+# file, not from _config.yml — that's a hard requirement of the
+# theme itself. Your repo already has _data/navigation.yml with
+# most of this wired up; see the separate navigation.yml delivered
+# alongside this file for the corrected, complete menu (adds
+# Weekly Record, Projects, and Contact, which were missing).
  
  
 # ------------------------------------------------------------
-# COLLECTIONS — one per editorial format
+# CONTENT MODEL — how your stories actually get organized
 # ------------------------------------------------------------
-collections:
-  ledger_file:
-    output: true
-    permalink: /ledger-file/:title/
-  peoples_brief:
-    output: true
-    permalink: /peoples-brief/:title/
-  weekly_record:
-    output: true
-    permalink: /weekly-record/:title/
-  investigations:
-    output: true
-    permalink: /investigations/:title/
-  editorials:
-    output: true
-    permalink: /editorials/:title/
-  projects:
-    output: true
-    permalink: /projects/:title/
+# Your site does NOT use Jekyll "collections" — it uses regular
+# blog posts in _posts/, each tagged with a "category:" front
+# matter field matching a section slug (ledger-file, peoples-brief,
+# weekly-record, investigations, editorials, projects). Each
+# section then has its own plain landing page (e.g. investigations/
+# index.md) that already exists in your repo. An earlier version of
+# this file defined unused "collections:" — those did nothing (no
+# matching folders existed) and have been removed here to match
+# your real setup.
  
  
 # ------------------------------------------------------------
@@ -204,6 +173,9 @@ collections:
 # ------------------------------------------------------------
 defaults:
   # -------------------------- posts --------------------------
+  # Applies to every story in _posts/ (Ledger File, People's Brief,
+  # Weekly Record, Investigations, Editorials, and Projects pieces
+  # all live here, distinguished by their "category:" front matter).
   - scope:
       path: ""
       type: posts
@@ -219,6 +191,9 @@ defaults:
       related: true
  
   # -------------------------- pages ---------------------------
+  # Applies to your section landing pages (ledger-file/index.md,
+  # investigations/index.md, about/index.md, contact/index.md, etc.)
+  # Any front matter a page sets itself always wins over these.
   - scope:
       path: ""
       type: pages
@@ -230,110 +205,15 @@ defaults:
       toc_label: "Contents"
       toc_icon: "list"
  
-  # ----------------------- ledger_file -------------------------
-  - scope:
-      path: ""
-      type: ledger_file
-    values:
-      layout: single
-      author_profile: false
-      read_time: true
-      toc: true
-      toc_label: "Contents"
-      toc_icon: "list"
- 
-  # ----------------------- peoples_brief ------------------------
-  - scope:
-      path: ""
-      type: peoples_brief
-    values:
-      layout: single
-      author_profile: false
-      read_time: true
-      toc: true
-      toc_label: "Contents"
-      toc_icon: "list"
- 
-  # ----------------------- weekly_record -------------------------
-  - scope:
-      path: ""
-      type: weekly_record
-    values:
-      layout: single
-      author_profile: false
-      read_time: true
-      toc: true
-      toc_label: "Contents"
-      toc_icon: "list"
- 
-  # ---------------------- investigations --------------------------
-  - scope:
-      path: ""
-      type: investigations
-    values:
-      layout: single
-      author_profile: false
-      read_time: true
-      toc: true
-      toc_label: "Contents"
-      toc_icon: "list"
- 
-  # ------------------------ editorials -----------------------------
-  - scope:
-      path: ""
-      type: editorials
-    values:
-      layout: single
-      author_profile: false
-      read_time: true
-      toc: true
-      toc_label: "Contents"
-      toc_icon: "list"
- 
-  # -------------------------- projects ------------------------------
-  - scope:
-      path: ""
-      type: projects
-    values:
-      layout: single
-      author_profile: false
-      read_time: true
-      toc: true
-      toc_label: "Contents"
-      toc_icon: "list"
- 
-  # ------------------------- homepage ---------------------------------
-  # Applies whether your homepage file is named index.html or index.md.
-  - scope:
-      path: "index.html"
-    values:
-      layout: home
-      author_profile: false
-      sidebar: false
-  - scope:
-      path: "index.md"
-    values:
-      layout: home
-      author_profile: false
-      sidebar: false
- 
-# NOTE ON THE HOMEPAGE:
-# _config.yml can assign the homepage a layout and turn its sidebar
-# off (done above), which gives you the "no sidebar, high-contrast
-# header" part of the request immediately, using the "contrast" skin.
-# The Marshall-Project-style content itself — a featured stories
-# section, then "Latest Investigations," "Latest Ledger File," and
-# "Latest People's Brief" grids — has to be built inside an actual
-# index.html file using Jekyll's templating, because that's page
-# content, not site configuration. I can generate that index.html
-# for you as a follow-up any time you're ready — just ask.
- 
  
 # ------------------------------------------------------------
 # READING / MARKDOWN SETTINGS
 # ------------------------------------------------------------
 markdown                 : kramdown
 highlighter              : rouge
+# Posts publish at /<category>/<title>/ — e.g. a post with
+# "category: investigations" and title "Broken Locks" publishes at
+# /investigations/broken-locks/, matching your section landing pages.
 permalink                : /:categories/:title/
 words_per_minute         : 200
  
