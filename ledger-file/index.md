@@ -8,5 +8,5 @@ show_title: true
 show_permalink: false
 ---
 
-Welcome to **The Ledger File**, the home of longform, evidence-based reporting at *The People’s Ledger*.  
-This section publishes deeply sourced stories, document-driven analysis, and accountability reporting that centers public power.
+Welcome to **The Ledger File**, the home of longform, evidence-based reporting at *The People's Ledger*.  
+This section documents how public decisions are made in Ghana, who influences them, and who benefits — drawing on records, filings, and institutional data to hold both formal and informal power to account.
