@@ -74,26 +74,22 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-archives
   - jekyll-paginate
+  - jekyll-include-cache
+  # ^ jekyll-include-cache is REQUIRED by Minimal Mistakes itself — the
+  # theme's own template files use a Liquid tag called "include_cached"
+  # internally. Without this plugin active, GitHub Pages fails to build
+  # the ENTIRE site with "Unknown tag 'include_cached'". This was
+  # missing before, which is why the site was stuck on an old build.
  
-# NOTE: jekyll-archives is not on GitHub Pages' default whitelist of
-# plugins. If your category/tag archive pages do not appear after
-# publishing, you will need to build the site via a GitHub Actions
-# workflow instead of GitHub's default Pages build. This is a
-# repository setting, not something this file controls.
- 
-# jekyll-archives settings (powers automatic category/tag archive pages)
-jekyll-archives:
-  enabled:
-    - categories
-    - tags
-  layouts:
-    category: archive-taxonomy
-    tag: archive-taxonomy
-  permalinks:
-    category: /categories/:name/
-    tag: /tags/:name/
+# jekyll-archives REMOVED: confirmed (by an actual failed build) that
+# it is not on GitHub Pages' supported plugin list, and listing an
+# unsupported plugin fails the entire site build, not just that one
+# feature. Category/tag archive pages simply aren't achievable on
+# GitHub's default Pages build. If you want them later, the fix is to
+# switch this repo to a GitHub Actions build workflow (which can run
+# any plugin in your Gemfile) — that's a bigger, separate change, not
+# a _config.yml tweak. Ask any time and I can set that up.
  
 # jekyll-paginate settings (used for the home page's story listing)
 paginate                 : 10
