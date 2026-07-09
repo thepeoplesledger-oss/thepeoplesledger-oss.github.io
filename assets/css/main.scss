@@ -3,12 +3,12 @@
 # and this comment are required so Jekyll processes this file).
 # Everything else in assets/css/ is compiled as a plain Sass partial.
 ---
- 
+
 @charset "utf-8";
- 
+
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'contrast' }}"; // skin
 @import "minimal-mistakes"; // main partials
- 
+
 /* ============================================================
    THE PEOPLE'S LEDGER — custom high-contrast editorial styling
    Everything below overrides the Minimal Mistakes "contrast" skin
@@ -18,30 +18,30 @@
    (masthead, nav, page titles, buttons) — it does not add or
    remove any content or pages.
    ============================================================ */
- 
+
 @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;700;900&family=Inter:wght@400;500;600&display=swap");
- 
+
 :root {
   --ledger-ink: #111111;    /* matches the site's existing meta-theme-color */
   --ledger-paper: #ffffff;
-  --ledger-accent: #b3121b; /* newsroom red — used sparingly, for labels/links */
+  --ledger-accent: #8b1e1e; /* deep ledger-ink red — a deficit-entry red rather than a generic warning red */
   --ledger-gray: #4a4a4a;
   --ledger-line: #d8d8d8;
 }
- 
+
 body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: var(--ledger-ink);
   background-color: var(--ledger-paper);
 }
- 
+
 h1, h2, h3, h4,
 .page__title {
   font-family: "Libre Franklin", "Inter", sans-serif;
-  font-weight: 800;
+  font-weight: 700; /* was 800 — softer, calmer, less "poster" */
   letter-spacing: -0.01em;
 }
- 
+
 /* ---------- Masthead / header ---------- */
 .masthead {
   background-color: var(--ledger-ink);
@@ -50,17 +50,24 @@ h1, h2, h3, h4,
 .masthead__inner-wrap { color: #fff; }
 .site-title {
   font-family: "Libre Franklin", sans-serif;
-  font-weight: 900;
-  font-size: 1.6em;
+  font-weight: 800; /* was 900 — logo/wordmark still bolder than body headlines, but toned down to match */
+  font-size: 1.4em; /* was 1.6em — trimmed slightly to free up room for nav items */
   letter-spacing: -0.01em;
   color: #ffffff !important;
 }
 .site-subtitle {
   color: #cfcfcf;
+  font-size: 0.75em;
 }
 .masthead a { color: #ffffff; }
- 
+
 /* ---------- Top navigation ---------- */
+/* Tightened from the theme's default spacing so more of the 8 nav
+   items (specifically Editorials and Projects) fit in the visible
+   bar before the greedy-nav algorithm collapses the rest into the
+   hamburger menu. Order in _data/navigation.yml already prioritizes
+   Editorials/Projects ahead of About/Contact — this is purely about
+   reclaiming horizontal space, not changing what gets cut first. */
 .greedy-nav {
   background-color: var(--ledger-ink);
 }
@@ -69,8 +76,12 @@ h1, h2, h3, h4,
   font-family: "Inter", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
-  font-size: 0.78em;
-  letter-spacing: 0.04em;
+  font-size: 0.7em;       /* was 0.78em */
+  letter-spacing: 0.02em; /* was 0.04em */
+}
+.greedy-nav .visible-links li a {
+  padding-left: 0.6em;    /* theme default is considerably wider */
+  padding-right: 0.6em;
 }
 .greedy-nav a:hover,
 .greedy-nav .visible-links li a:hover {
@@ -82,7 +93,7 @@ h1, h2, h3, h4,
 .greedy-nav__toggle svg {
   fill: #fff;
 }
- 
+
 /* ---------- Section landing pages (Investigations, Ledger File, etc.) ---------- */
 .page__title {
   border-bottom: 3px solid var(--ledger-ink);
@@ -96,7 +107,7 @@ h1, h2, h3, h4,
 .page__content a:hover {
   color: var(--ledger-accent);
 }
- 
+
 /* ---------- Buttons (used on the homepage's featured-story links) ---------- */
 .btn--primary,
 .btn--primary:visited {
@@ -104,7 +115,7 @@ h1, h2, h3, h4,
   color: #fff !important;
 }
 .btn--primary:hover {
-  background-color: #8f0e15 !important;
+  background-color: #6e1717 !important; /* darker shade of the new #8b1e1e accent */
 }
 .btn--small,
 .btn--small:visited {
@@ -114,7 +125,7 @@ h1, h2, h3, h4,
 .btn--small:hover {
   background-color: #333333 !important;
 }
- 
+
 /* ---------- Section headings on the homepage (## Ledger File, etc.) ---------- */
 .page__content h2 {
   text-transform: uppercase;
