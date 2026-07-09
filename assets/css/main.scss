@@ -47,7 +47,10 @@ h1, h2, h3, h4,
   background-color: var(--ledger-ink);
   border-bottom: 3px solid var(--ledger-accent);
 }
-.masthead__inner-wrap { color: #fff; }
+.masthead__inner-wrap {
+  color: #fff;
+  max-width: 1700px;
+}
 .site-title {
   font-family: "Libre Franklin", sans-serif;
   font-weight: 800; /* was 900 — logo/wordmark still bolder than body headlines, but toned down to match */
