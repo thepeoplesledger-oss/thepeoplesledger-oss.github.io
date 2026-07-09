@@ -1,160 +1,365 @@
+# ============================================================
+# THE PEOPLE'S LEDGER — Jekyll / GitHub Pages configuration
+# Theme: Minimal Mistakes (loaded remotely, no local install needed)
+# ============================================================
+# HOW TO USE THIS FILE
+# 1. Copy this entire file and paste it in as "_config.yml" at the
+#    root of your GitHub repository (replace any existing file).
+# 2. Filled in for you already: GitHub username (thepeoplesledger-oss)
+#    and repository (thepeoplesledger-oss.github.io).
+# 3. No public email was provided yet, so the "Email" contact links
+#    have been left out for now. Once you have one, search for
+#    "ADD EMAIL HERE" in this file for the two spots to add it back.
+# 4. Commit the file. GitHub Pages will rebuild the site automatically.
+# ============================================================
+ 
+ 
 # ------------------------------------------------------------
-# Site Identity
+# SITE IDENTITY
 # ------------------------------------------------------------
-
-title: "The People's Ledger"
-
-description: >-
-  Independent public-interest journalism investigating power,
-  public spending, governance, corruption, and the real-world
-  impact of policy decisions on everyday Ghanaians.
-
-url: "https://thepeoplesledger-oss.github.io"
-baseurl: ""
-
-minimal_mistakes_skin: default
-
-search: true
-
-github_username: thepeoplesledger-oss
-
+locale                   : "en-US"
+title                    : "The People's Ledger"
+title_separator          : "-"
+name                     : "The People's Ledger"
+subtitle                 : "Truth, documented."
+description              : "A public-interest investigative newsroom focused on accountability, documentation, and evidence-based reporting."
+masthead_title           : "The People's Ledger"
+ 
+# Full web address of your site once it is live on GitHub Pages.
+url                      : "https://thepeoplesledger-oss.github.io"
+# Blank because thepeoplesledger-oss.github.io is a user/organization
+# Pages site (repo name = username.github.io), which is served from
+# the domain root rather than a project sub-folder.
+baseurl                  : ""
+repository               : "thepeoplesledger-oss/thepeoplesledger-oss.github.io"
+ 
+# No image logo is used — the masthead shows clean text only,
+# per the "no logo, text header" requirement.
+logo                     :
+og_image                 :
+ 
+# Time zone used for post/collection dates.
+timezone                 : "America/New_York"
+ 
+ 
 # ------------------------------------------------------------
-# Theme
+# APPEARANCE — high-contrast, serious editorial look
 # ------------------------------------------------------------
-
-remote_theme: "mmistakes/minimal-mistakes"
-
+# "contrast" is Minimal Mistakes' built-in high-contrast black/white
+# skin — closest stock match to a Marshall-Project-style look.
+minimal_mistakes_skin    : "contrast"
+ 
+# Breadcrumbs give the site a structured, "newsroom section" feel
+# similar to how The Marshall Project labels its story sections.
+breadcrumbs              : true
+ 
+# Site search (optional but standard on serious editorial sites).
+search                   : true
+search_full_content      : true
+ 
+ 
 # ------------------------------------------------------------
-# Navigation
+# THEME
 # ------------------------------------------------------------
-
-navigation:
-  - title: "Investigations"
-    url: "/investigations/"
-
-  - title: "Ledger File"
-    url: "/ledger-file/"
-
-  - title: "People's Brief"
-    url: "/peoples-brief/"
-
-  - title: "Weekly Record"
-    url: "/weekly-record/"
-
-  - title: "Accountability Tracker"
-    url: "/accountability-tracker/"
-
-  - title: "About"
-    url: "/about/"
-
+# Remote theme means GitHub Pages builds Minimal Mistakes for you —
+# you do not need to install or manage any theme files yourself.
+remote_theme             : "mmistakes/minimal-mistakes"
+ 
+ 
 # ------------------------------------------------------------
-# Homepage
+# PLUGINS
 # ------------------------------------------------------------
-
-home:
-  layout: home
-  nav: true
-
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-archives
+  - jekyll-paginate
+ 
+# NOTE: jekyll-archives is not on GitHub Pages' default whitelist of
+# plugins. If your category/tag archive pages do not appear after
+# publishing, you will need to build the site via a GitHub Actions
+# workflow instead of GitHub's default Pages build. This is a
+# repository setting, not something this file controls.
+ 
+# jekyll-archives settings (powers automatic category/tag archive pages)
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
+ 
+# jekyll-paginate settings (used for the home page's story listing)
+paginate                 : 10
+paginate_path            : /page:num/
+ 
+ 
 # ------------------------------------------------------------
-# Defaults
+# SEO + SOCIAL  (jekyll-seo-tag)
 # ------------------------------------------------------------
-
+# jekyll-seo-tag automatically builds canonical URLs from "url" +
+# "baseurl" + each page's own address, so no extra setting is needed
+# beyond what's already defined above.
+twitter:
+  username           :
+og_image             :
+ 
+# Organization identity used in SEO structured data.
+social:
+  type  : "Organization"
+  name  : "The People's Ledger"
+  links:
+    - "https://github.com/thepeoplesledger-oss"
+ 
+author:
+  name            : "The People's Ledger"
+  avatar          : false
+  bio             : "Truth, documented."
+  location        : ""
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/thepeoplesledger-oss"
+    # ADD EMAIL HERE once you have a public contact address:
+    # - label: "Email"
+    #   icon: "fas fa-fw fa-envelope-square"
+    #   url: "mailto:you@example.com"
+ 
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/thepeoplesledger-oss"
+    # ADD EMAIL HERE once you have a public contact address:
+    # - label: "Email"
+    #   icon: "fas fa-fw fa-envelope-square"
+    #   url: "mailto:you@example.com"
+ 
+ 
+# ------------------------------------------------------------
+# TOP NAVIGATION
+# ------------------------------------------------------------
+# IMPORTANT: Minimal Mistakes reads the top navigation menu from a
+# SEPARATE file, not from _config.yml — this is a hard requirement
+# of the theme itself, not a choice made here. Create a file at:
+#     _data/navigation.yml
+# with exactly this content so the menu matches your request:
+#
+# main:
+#   - title: "Ledger File"
+#     url: /ledger-file/
+#   - title: "People's Brief"
+#     url: /peoples-brief/
+#   - title: "Weekly Record"
+#     url: /weekly-record/
+#   - title: "Investigations"
+#     url: /investigations/
+#   - title: "Editorials"
+#     url: /editorials/
+#   - title: "Projects"
+#     url: /projects/
+#   - title: "About"
+#     url: /about/
+#   - title: "Contact"
+#     url: /contact/
+#
+# Each of those URLs is the collection's landing page. You'll need a
+# simple page (e.g. ledger-file.md) at each address that lists that
+# collection — ask me any time and I can generate those pages too.
+ 
+ 
+# ------------------------------------------------------------
+# COLLECTIONS — one per editorial format
+# ------------------------------------------------------------
+collections:
+  ledger_file:
+    output: true
+    permalink: /ledger-file/:title/
+  peoples_brief:
+    output: true
+    permalink: /peoples-brief/:title/
+  weekly_record:
+    output: true
+    permalink: /weekly-record/:title/
+  investigations:
+    output: true
+    permalink: /investigations/:title/
+  editorials:
+    output: true
+    permalink: /editorials/:title/
+  projects:
+    output: true
+    permalink: /projects/:title/
+ 
+ 
+# ------------------------------------------------------------
+# DEFAULTS — applied automatically so you never have to repeat
+# this front matter in every single file
+# ------------------------------------------------------------
 defaults:
-
-  # Posts
-
+  # -------------------------- posts --------------------------
   - scope:
       path: ""
       type: posts
     values:
       layout: single
-      nav: true
       author_profile: false
-      show_date: true
       read_time: true
-      share: true
-      related: true
+      toc: true
+      toc_label: "Contents"
+      toc_icon: "list"
       comments: false
-
-  # Pages
-
+      share: false
+      related: true
+ 
+  # -------------------------- pages ---------------------------
   - scope:
       path: ""
       type: pages
     values:
       layout: single
       author_profile: false
-      show_permalink: false
-      read_time: false
-
+      read_time: true
+      toc: true
+      toc_label: "Contents"
+      toc_icon: "list"
+ 
+  # ----------------------- ledger_file -------------------------
+  - scope:
+      path: ""
+      type: ledger_file
+    values:
+      layout: single
+      author_profile: false
+      read_time: true
+      toc: true
+      toc_label: "Contents"
+      toc_icon: "list"
+ 
+  # ----------------------- peoples_brief ------------------------
+  - scope:
+      path: ""
+      type: peoples_brief
+    values:
+      layout: single
+      author_profile: false
+      read_time: true
+      toc: true
+      toc_label: "Contents"
+      toc_icon: "list"
+ 
+  # ----------------------- weekly_record -------------------------
+  - scope:
+      path: ""
+      type: weekly_record
+    values:
+      layout: single
+      author_profile: false
+      read_time: true
+      toc: true
+      toc_label: "Contents"
+      toc_icon: "list"
+ 
+  # ---------------------- investigations --------------------------
+  - scope:
+      path: ""
+      type: investigations
+    values:
+      layout: single
+      author_profile: false
+      read_time: true
+      toc: true
+      toc_label: "Contents"
+      toc_icon: "list"
+ 
+  # ------------------------ editorials -----------------------------
+  - scope:
+      path: ""
+      type: editorials
+    values:
+      layout: single
+      author_profile: false
+      read_time: true
+      toc: true
+      toc_label: "Contents"
+      toc_icon: "list"
+ 
+  # -------------------------- projects ------------------------------
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: single
+      author_profile: false
+      read_time: true
+      toc: true
+      toc_label: "Contents"
+      toc_icon: "list"
+ 
+  # ------------------------- homepage ---------------------------------
+  # Applies whether your homepage file is named index.html or index.md.
+  - scope:
+      path: "index.html"
+    values:
+      layout: home
+      author_profile: false
+      sidebar: false
+  - scope:
+      path: "index.md"
+    values:
+      layout: home
+      author_profile: false
+      sidebar: false
+ 
+# NOTE ON THE HOMEPAGE:
+# _config.yml can assign the homepage a layout and turn its sidebar
+# off (done above), which gives you the "no sidebar, high-contrast
+# header" part of the request immediately, using the "contrast" skin.
+# The Marshall-Project-style content itself — a featured stories
+# section, then "Latest Investigations," "Latest Ledger File," and
+# "Latest People's Brief" grids — has to be built inside an actual
+# index.html file using Jekyll's templating, because that's page
+# content, not site configuration. I can generate that index.html
+# for you as a follow-up any time you're ready — just ask.
+ 
+ 
 # ------------------------------------------------------------
-# Build Settings
+# READING / MARKDOWN SETTINGS
 # ------------------------------------------------------------
-
-markdown: kramdown
-
-permalink: pretty
-
-paginate: 10
-paginate_path: /page:num/
-
-timezone: Africa/Accra
-
+markdown                 : kramdown
+highlighter              : rouge
+permalink                : /:categories/:title/
+words_per_minute         : 200
+ 
+kramdown:
+  input                  : GFM
+  hard_wrap              : false
+  auto_ids               : true
+  footnote_nr            : 1
+  entity_output          : as_char
+  toc_levels             : 1..6
+  smart_quotes           : lsquo,rsquo,ldquo,rdquo
+  use_coderay            : false
+ 
 include:
   - _pages
-
-# ------------------------------------------------------------
-# Plugins
-# ------------------------------------------------------------
-
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-feed
-  - jemoji
-  - jekyll-gist
-  - jekyll-include-cache
-
-# ------------------------------------------------------------
-# Organization Profile
-# ------------------------------------------------------------
-
-author:
-  name: "The People's Ledger"
-  bio: "Independent civic newsroom focused on accountability, transparency, governance, and public-interest reporting."
-
-# ------------------------------------------------------------
-# Footer Links
-# ------------------------------------------------------------
-
-footer:
-  links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/thepeoplesledger-oss"
-
-    - label: "RSS Feed"
-      icon: "fas fa-fw fa-rss"
-      url: "/feed.xml"
-
-# ------------------------------------------------------------
-# Archives
-# ------------------------------------------------------------
-
-category_archive:
-  type: liquid
-  path: /categories/
-
-tag_archive:
-  type: liquid
-  path: /tags/
-
-# ------------------------------------------------------------
-# SEO
-# ------------------------------------------------------------
-
-og_image: "/assets/images/ledger-social-card.jpg"
-
-twitter:
-  username:
-  card: summary_large_image
+exclude:
+  - "*.gemspec"
+  - "*.gem"
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+ 
+sass:
+  sass_dir               : _sass
+  style                  : compressed
