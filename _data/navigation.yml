@@ -1,11 +1,17 @@
 main:
   - title: "Ledger File"
     url: /ledger-file/
-  - title: "People’s Brief"
+  - title: "People's Brief"
     url: /peoples-brief/
+  - title: "Weekly Record"
+    url: /weekly-record/
   - title: "Investigations"
     url: /investigations/
   - title: "Editorials"
     url: /editorials/
+  - title: "Projects"
+    url: /projects/
   - title: "About"
     url: /about/
+  - title: "Contact"
+    url: /contact/
