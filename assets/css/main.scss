@@ -54,13 +54,13 @@ h1, h2, h3, h4,
 .site-title {
   font-family: "Libre Franklin", sans-serif;
   font-weight: 800; /* was 900 — logo/wordmark still bolder than body headlines, but toned down to match */
-  font-size: 1.4em; /* was 1.6em — trimmed slightly to free up room for nav items */
+  font-size: 1.2em; /* was 1.6em — trimmed slightly to free up room for nav items */
   letter-spacing: -0.01em;
   color: #ffffff !important;
 }
 .site-subtitle {
   color: #cfcfcf;
-  font-size: 0.75em;
+  font-size: 0.65em;
 }
 .masthead a { color: #ffffff; }
 
@@ -79,12 +79,12 @@ h1, h2, h3, h4,
   font-family: "Inter", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
-  font-size: 0.66em;
-  letter-spacing: 0.01em;
+  font-size: 0.6em;
+  letter-spacing: 0.0em;
 }
 .greedy-nav .visible-links li a {
-  padding-left: 0.45em;
-  padding-right: 0.45em;
+  padding-left: 0.32em;
+  padding-right: 0.32em;
 }
 .greedy-nav a:hover,
 .greedy-nav .visible-links li a:hover {
