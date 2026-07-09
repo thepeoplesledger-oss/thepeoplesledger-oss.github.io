@@ -7,5 +7,5 @@ show_title: true
 show_permalink: false
 ---
 
-The People’s Brief is a concise, high‑signal summary of what the public needs to know — fast. 
-This section distills complex issues into clear, actionable insights without losing accuracy or nuance
+The People's Brief turns complex public issues in Ghana, from the cost of living to infrastructure spending, into concise, high‑signal explainers.  
+Each brief distills what changed, why it matters, and what to watch, without losing accuracy or nuance.
