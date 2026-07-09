@@ -5,25 +5,29 @@ permalink: /about/
 author_profile: false
 ---
 
-The People's Ledger
-A civic newsroom for evidence, accountability, and public power.
-The People's Ledger exists to strengthen democratic life by producing journalism that is disciplined, document‑driven, and centered on the public interest.
-We publish work that clarifies power, exposes failures of governance, and expands the public's ability to understand — and influence — the systems that shape their lives.
-Our Mission
-To build a newsroom that treats evidence as a public good, elevates civic literacy, and restores trust through transparency, rigor, and accountability.
-Our Standards
+# The People's Ledger  
+A civic accountability newsroom for Ghana.
 
-We publish methodology and source notes for all major stories.
-We correct errors publicly and promptly.
-We refuse political sponsorships and advertorial influence.
-We prioritize clarity, neutrality, and public usefulness.
+**The People's Ledger** investigates the public, private, and informal actors whose decisions and influence shape everyday life in Ghana, government ministries and agencies, business elites, contractors, financial institutions, developers, and individuals who acquire sudden wealth or influence without clear explanation.
 
-Our Work
+We report on the systems, structures, and outcomes behind that power: infrastructure, housing, education, the cost of living, urban congestion, economic centralization, and the performance of public institutions.
+
+## Our Mission
+To make public information clear, accessible, and actionable — giving citizens evidence instead of noise, and a clear account of how decisions are made, who benefits from them, and how those choices shape daily life in Ghana.
+
+## Our Standards
+- We publish methodology and source notes for all major stories.  
+- We correct errors publicly and promptly.  
+- We refuse political sponsorships and advertorial influence.  
+- We report on formal and informal power alike, regardless of who holds it.  
+- Our tone is neutral, precise, institutional, and calm, the facts carry the weight, not the framing.  
+
+## Our Work
 The People's Ledger publishes across six desks:
 
-Ledger File — longform, evidence‑based reporting
-People's Brief — short explainers and public guides
-Weekly Record — a recurring roundup of governance, corporate, and economic developments
-Investigations — document‑driven accountability reporting
-Editorials — opinion and analysis grounded in civic responsibility
-Projects — sustained tracking of major government initiatives and public commitments, from the day they're announced through the years afterward when most newsrooms have stopped paying attention. Projects exists because the follow-up is where accountability actually happens.
+- **Ledger File** — longform, evidence‑based reporting on how public decisions are made and who they benefit.  
+- **People's Brief** — short explainers that make public information accessible and actionable.  
+- **Weekly Record** — a recurring roundup of governance, corporate, and economic developments in Ghana.  
+- **Investigations** — document‑driven reporting on institutions, contractors, and systems of influence.  
+- **Editorials** — analysis grounded in evidence and civic responsibility.  
+- **Projects** — sustained tracking of major government initiatives and public commitments, from announcement through the years afterward when most newsrooms have stopped paying attention.
