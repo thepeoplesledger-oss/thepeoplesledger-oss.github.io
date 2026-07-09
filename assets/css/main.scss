@@ -76,12 +76,12 @@ h1, h2, h3, h4,
   font-family: "Inter", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
-  font-size: 0.7em;       /* was 0.78em */
-  letter-spacing: 0.02em; /* was 0.04em */
+  font-size: 0.66em;
+  letter-spacing: 0.01em;
 }
 .greedy-nav .visible-links li a {
-  padding-left: 0.6em;    /* theme default is considerably wider */
-  padding-right: 0.6em;
+  padding-left: 0.45em;
+  padding-right: 0.45em;
 }
 .greedy-nav a:hover,
 .greedy-nav .visible-links li a:hover {
