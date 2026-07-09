@@ -1,0 +1,126 @@
+---
+# Only the main Sass file needs front matter (the three dashes above
+# and this comment are required so Jekyll processes this file).
+# Everything else in assets/css/ is compiled as a plain Sass partial.
+---
+ 
+@charset "utf-8";
+ 
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'contrast' }}"; // skin
+@import "minimal-mistakes"; // main partials
+ 
+/* ============================================================
+   THE PEOPLE'S LEDGER — custom high-contrast editorial styling
+   Everything below overrides the Minimal Mistakes "contrast" skin
+   to read closer to The Marshall Project: bold sans headlines, a
+   near-black masthead, a single restrained red accent, and plain,
+   confident typography. It only restyles existing theme elements
+   (masthead, nav, page titles, buttons) — it does not add or
+   remove any content or pages.
+   ============================================================ */
+ 
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;700;900&family=Inter:wght@400;500;600&display=swap");
+ 
+:root {
+  --ledger-ink: #111111;    /* matches the site's existing meta-theme-color */
+  --ledger-paper: #ffffff;
+  --ledger-accent: #b3121b; /* newsroom red — used sparingly, for labels/links */
+  --ledger-gray: #4a4a4a;
+  --ledger-line: #d8d8d8;
+}
+ 
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--ledger-ink);
+  background-color: var(--ledger-paper);
+}
+ 
+h1, h2, h3, h4,
+.page__title {
+  font-family: "Libre Franklin", "Inter", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+ 
+/* ---------- Masthead / header ---------- */
+.masthead {
+  background-color: var(--ledger-ink);
+  border-bottom: 3px solid var(--ledger-accent);
+}
+.masthead__inner-wrap { color: #fff; }
+.site-title {
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 900;
+  font-size: 1.6em;
+  letter-spacing: -0.01em;
+  color: #ffffff !important;
+}
+.site-subtitle {
+  color: #cfcfcf;
+}
+.masthead a { color: #ffffff; }
+ 
+/* ---------- Top navigation ---------- */
+.greedy-nav {
+  background-color: var(--ledger-ink);
+}
+.greedy-nav a {
+  color: #f2f2f2;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.78em;
+  letter-spacing: 0.04em;
+}
+.greedy-nav a:hover,
+.greedy-nav .visible-links li a:hover {
+  color: var(--ledger-accent);
+}
+.greedy-nav button {
+  background-color: var(--ledger-ink);
+}
+.greedy-nav__toggle svg {
+  fill: #fff;
+}
+ 
+/* ---------- Section landing pages (Investigations, Ledger File, etc.) ---------- */
+.page__title {
+  border-bottom: 3px solid var(--ledger-ink);
+  padding-bottom: 0.3em;
+}
+.page__content a {
+  color: var(--ledger-ink);
+  text-decoration-color: var(--ledger-accent);
+  text-decoration-thickness: 2px;
+}
+.page__content a:hover {
+  color: var(--ledger-accent);
+}
+ 
+/* ---------- Buttons (used on the homepage's featured-story links) ---------- */
+.btn--primary,
+.btn--primary:visited {
+  background-color: var(--ledger-accent) !important;
+  color: #fff !important;
+}
+.btn--primary:hover {
+  background-color: #8f0e15 !important;
+}
+.btn--small,
+.btn--small:visited {
+  background-color: var(--ledger-ink) !important;
+  color: #fff !important;
+}
+.btn--small:hover {
+  background-color: #333333 !important;
+}
+ 
+/* ---------- Section headings on the homepage (## Ledger File, etc.) ---------- */
+.page__content h2 {
+  text-transform: uppercase;
+  font-size: 1.1em;
+  letter-spacing: 0.06em;
+  border-bottom: 3px solid var(--ledger-ink);
+  padding-bottom: 0.4em;
+  margin-top: 2.5em;
+}
